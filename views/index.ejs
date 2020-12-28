@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Random Recipes</title>
+</head>
+<body>
+        <h1><%= recipes[0].title %></h1>
+        <img src="<%= recipes[0].image %>"><br>
+            <h2>Ingredients</h2>
+            
+            <% for(var i=0; i<recipes[0].extendedIngredients.length; i++) {%>
+                <%= recipes[0].extendedIngredients[i].amount %> 
+                <%= recipes[0].extendedIngredients[i].unit %>
+                <%= recipes[0].extendedIngredients[i].name %> <br>
+                
+            <% } %>
+            <h2>Instructions</h2>
+            <%- recipes[0].instructions %>
+            <h2>Summary</h2>
+            <%- recipes[0].summary %>
+        
+</body>
+</html>
